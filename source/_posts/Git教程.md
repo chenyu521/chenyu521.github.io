@@ -5,6 +5,8 @@ tags: Git
 categories:
 	- 教程
 	- Git
+cover: https://gitee.com/chenyustudy/pic-go/raw/master/git.jpg
+top_img: https://gitee.com/chenyustudy/pic-go/raw/master/git.jpg
 ---
 
 # 安装Git
