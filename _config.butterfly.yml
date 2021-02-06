@@ -13,7 +13,7 @@ menu:
   时间轴: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  网盘: https://service-c3ztkzv3-1257692848.cd.apigw.tencentcs.com/release/SCFOnedriveIndex-1612261073/ || fas fa-cloud
+ # 网盘: https://service-c3ztkzv3-1257692848.cd.apigw.tencentcs.com/release/SCFOnedriveIndex-1612261073/ || fas fa-cloud
   #清单||fa fa-heartbeat:
   #  - 音乐 || /music/ || fas fa-music
   #  - 照片 || /Gallery/ || fas fa-images
