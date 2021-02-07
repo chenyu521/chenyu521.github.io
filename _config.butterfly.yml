@@ -518,7 +518,7 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background:
+background: url(https://gitee.com/chenyustudy/pic-go/raw/master/background.jpg)
 
 # Footer Background
 footer_bg: false
@@ -866,6 +866,7 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+      - <link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'">
       - '<style type="text/css">#toggle-sidebar {bottom: 80px}</style>'
   bottom:
     # - <script src="xxxx"></script>
