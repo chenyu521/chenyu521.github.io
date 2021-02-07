@@ -2,6 +2,7 @@
 title: 我们一起干过的其他事
 date: 2021-02-01 23:02:55
 type: '其他'
+comments: false
 ---
 
 {% gallery %}
