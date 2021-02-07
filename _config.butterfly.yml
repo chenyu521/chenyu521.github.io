@@ -98,7 +98,7 @@ disable_top_img: false
 index_img: 
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://gitee.com/chenyustudy/pic-go/raw/master/background.jpg
+default_top_img: 
 
 # The banner image of archive page
 archive_img:
