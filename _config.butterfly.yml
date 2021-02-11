@@ -338,6 +338,7 @@ waline:
   emojiCDN: # emoji CDN
   bg: /image/comment_bg.png # waline background
   option:
+     requiredFields: ['nick','mail']
 
 # utterances
 # https://utteranc.es/
@@ -419,7 +420,7 @@ footer:
 
 # Baidu Analytics
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: 4f7104e85fe51b85c38d601069e8aa01
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
@@ -471,7 +472,7 @@ bing_site_verification:
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification:
+baidu_site_verification: code-79eIabBWul
 
 # 360 Webmaster tools verification setting
 # see http://zhanzhang.so.com/
@@ -649,7 +650,7 @@ aside:
   enable: true
   hide: false
   button: true
-  mobile: true # display on mobile
+  mobile: false # display on mobile
   position: right # left or right
   card_author:
     enable: true
@@ -762,7 +763,7 @@ darkmode:
 
 # medium-zoom
 # https://github.com/francoischalifour/medium-zoom
-medium_zoom: true
+medium_zoom: false
 
 # fancybox
 # http://fancyapps.com/fancybox/3/
