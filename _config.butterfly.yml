@@ -440,7 +440,7 @@ cloudflare_analytics:
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
-microsoft_clarity:
+microsoft_clarity: 5ectcdd6oi
 
 # Advertisement
 # --------------------------------------
@@ -468,7 +468,7 @@ google_site_verification:
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-bing_site_verification:
+bing_site_verification: DBC168DF9EC12567720BA1D6F97E290C
 
 # Baidu Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
