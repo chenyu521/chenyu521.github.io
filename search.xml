@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>常用DOS命令</title>
+      <link href="2021/03/09/%E5%B8%B8%E7%94%A8DOS%E5%91%BD%E4%BB%A4/"/>
+      <url>2021/03/09/%E5%B8%B8%E7%94%A8DOS%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<p>常用DOS命令</p><ul><li>exit<ul><li>退出当前DOS命令窗口</li></ul></li><li>cls<ul><li>清屏</li></ul></li><li>dir<ul><li>列出当前目录下所有的子文件/子目录</li></ul></li><li>cd<ul><li>切换目录<ul><li>cd .. 回到上级目录</li><li>cd \ 回到根路径</li></ul></li></ul></li><li>mkdir<ul><li>创建文件夹</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Dos </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Dos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>linux基础</title>
       <link href="2021/03/09/linux%E5%9F%BA%E7%A1%80/"/>
       <url>2021/03/09/linux%E5%9F%BA%E7%A1%80/</url>
