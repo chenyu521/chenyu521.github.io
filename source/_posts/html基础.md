@@ -299,7 +299,7 @@ W3C制定了很多规范：
     </head>
     <body>
         <center><h1>测试表格</h1></center>
-        <hr>
+        <hr >
         <table align="center" border="1px" width="300px" height="150px">
             <!--头部-->
             <thead>
@@ -309,7 +309,7 @@ W3C制定了很多规范：
                     <th>3</th>
                 </tr>
             </thead>
-            <!--体-->>
+            <!--体-->
             <tbody>
                 <tr>
                     <td colspan="2">a</td>
@@ -331,7 +331,7 @@ W3C制定了很多规范：
                     -->
                 </tr>
             </tbody>
-            <!--脚-->>
+            <!--脚-->
             <tfoot>
                 <tr>
                     <td>合计</td>
