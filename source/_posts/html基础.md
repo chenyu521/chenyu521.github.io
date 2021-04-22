@@ -148,3 +148,200 @@ W3C制定了很多规范：
 ```
 
 [点击此处预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/2.html)
+
+# HTML的实体符号
+
+|   符号   | 作用 |
+| :------: | :--: |
+|  `&lt;`  | 小于 |
+|  `&gt;`  | 大于 |
+| `&nbsp;` | 空格 |
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>实体符号</title>
+    </head>
+    <body>
+        <!--实体符号特点是：以&开始，以;结束。&lt; 是小于号    &gt;是大于号    &nbsp;是空格-->
+        b&lt;a&gt;c<br>
+        a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/3.html)
+
+# HTML的表格
+
+|   标签    |           作用           |
+| :-------: | :----------------------: |
+| `<table>` |           表格           |
+|  `<tr>`   |        表格的一行        |
+|  `<td>`   |          单元格          |
+|  `<th>`   | 单元格（自动居中、加粗） |
+
+表格的属性
+
+| 标签                    | 作用       |
+| ----------------------- | ---------- |
+| align=center/left/right | 对齐方式   |
+| width                   | 宽度       |
+| height                  | 高度       |
+| border                  | 表格框大小 |
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表格</title>
+    </head>
+    <body>
+        <!--
+            border="1px"  设置表格的边框为1像素宽度。
+            width 宽度
+            height 高度
+        -->
+        <center><h1>测试表格</h1></center>
+        <hr>
+        <table align="center" border="1px" width="300px" height="150px">
+            <!--align对齐方式-->
+            <tr align="center">
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>d</td>
+                <td>e</td>
+                <td>f</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>y</td>
+                <td>z</td>
+            </tr>
+        </table>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/4.html)
+
+## HTML的单元格合并
+
+> colspan 合并行
+>
+> rowspan 合并列
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表格单元格合并</title>
+    </head>
+    <body>
+        <!--
+            1、row合并的时候，删除“下面的”单元格
+            2、col合并的时候，对删除哪个没有要求
+        -->
+        <center><h1>测试表格</h1></center>
+        <hr>
+        <table align="center" border="1px" width="300px" height="150px">
+            <tr>
+                <!--th标签也是单元格标签，比td多的是居中，加粗-->
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <td colspan="2">a</td>
+                <!--
+                <td>b</td>
+                -->
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>d</td>
+                <td>e</td>
+                <td rowspan="2">f</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>y</td>
+                <!--
+                <td>z</td>
+                -->
+            </tr>
+        </table>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/5.html)
+
+## thead、tbody、tfoot标签
+
+> 在table中不是必须的，只是便于后期的JS代码的编写
+>
+> thead:头
+>
+> tbody:体
+>
+> tfoot:脚
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>thead、tbody、tfoot标签</title>
+    </head>
+    <body>
+        <center><h1>测试表格</h1></center>
+        <hr>
+        <table align="center" border="1px" width="300px" height="150px">
+            <!--头部-->
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                </tr>
+            </thead>
+            <!--体-->>
+            <tbody>
+                <tr>
+                    <td colspan="2">a</td>
+                    <!--
+                    <td>b</td>
+                    -->
+                    <td>c</td>
+                </tr>
+                <tr>
+                    <td>d</td>
+                    <td>e</td>
+                    <td rowspan="2">f</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>y</td>
+                    <!--
+                    <td>z</td>
+                    -->
+                </tr>
+            </tbody>
+            <!--脚-->>
+            <tfoot>
+                <tr>
+                    <td>合计</td>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/6.html)
