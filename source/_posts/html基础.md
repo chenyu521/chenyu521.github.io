@@ -507,3 +507,271 @@ W3C制定了很多规范：
 ```
 
 [点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/10.html)
+
+# HTML表单
+
+## form表单初步
+
+> 1、表单有什么用？
+>
+> - 手机用户信息，表单展现之后，用户填写表单，点击提交按钮提交数据给服务器
+>
+> 2、怎么画一个表单？
+>
+> - 使用form标签画表单
+>
+> 3、一个网页当中可以有多个表单
+>
+> 4、表单最终是需要提交数据给服务器的。form标签有一个action属性，这个属性用来指定服务器地址
+>
+> - action属性用来指定数据提交给哪个服务器。
+> - action属性和超链接中的href属性一样，都可以给服务器发送请求（request）
+>
+> 5、 表单是以什么格式提交给服务器的？
+>
+> ​        https://localhost:8080/jd/login?username=abc&password=123
+>
+> ​        格式：action?name=value&name=value
+>
+> ​        HTTP协议规定的，必须以这种格式提交给服务器
+>
+> 6、form表单的method属性：
+>
+> - get：采用get方式提交的时候，用户提交的信息会显示在浏览器的地址栏上
+> - post：采用post方式提交的时候，用户提交的信息不会显示在浏览器地址栏上
+>
+> 当用户提交的信息中含有敏感信息，例如：密码，建议采用post方式提交
+>
+> method的属性不指定，默认为get
+>
+> post提交的时候提交的数据格式和get还是一样的，只不过不在地址栏上显示出来
+>
+> 7、超链接也可以提交数据给服务器，但是提交的数据都是固定不变的，超链接是get请求，不是post请求
+>
+> <font color="red"><b>重点强调，表单项写了name属性的，一律会提交给服务器，不想提交就不写name<br />当name没有写的时候，该项不会提交给服务器<br />当value没有写的时候，value的默认值是空字符串""，会将空字符串提交给服务器</b></font>
+
+input的type属性
+
+| 属性            | 作用                                     |
+| --------------- | ---------------------------------------- |
+| text            | 文本框                                   |
+| radio           | 单选框                                   |
+| checkbox        | 复选框                                   |
+| button          | 按钮                                     |
+| sumbit（value） | 提交按钮(用于显示按钮上的文本信息)       |
+| reset           | 重置按钮                                 |
+| password        | 密码框                                   |
+| select          | 下拉列表                                 |
+| file            | 上传文件                                 |
+| hidden          | 隐藏域（在网页上不显示，表单提交会提交） |
+
+<font color="red"><b>注意事项：<br />单选按钮的value值必须手动指定<br />文本域没有value属性，用户填写的内容就是value</b></font>
+
+```html
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>form表单</title>
+    </head>
+    <body>
+
+        <!--画一个表单-->
+        <form action="https://localhost:8080/oa/sava">
+            <!--
+                画一个提交按钮，这个按钮可以提交表单
+                画按钮可以使用input输入域，type="submit"的时候表示该按钮是一个提交按钮，具有提交表单的功能
+                对于按钮来说，按钮的value属性用来指定按钮上的文本信息
+            -->
+            <input type="submit" value="提交" />
+            <!--这是一个普通按钮，不具备提交表单的功能-->
+            <input type="button" value="文字啊" />
+        </form>
+        <!--这个按钮和普通的超链接没有什么太大的区别（超链接和表单都可以向服务器发送请求，只不过表单发送请求可以携带数据。）-->
+        <form action="https://www.baidu.com/s">
+            <input type="text" value="请输入你要百度的数据"  name="wd"/>
+            <input type="submit" value="百度" />
+        </form>
+
+        <hr />
+        <form action="https://localhost:8080/jd/login">
+            用户名<input type="text" /><br />
+            密码<input type="password" /><br />
+            <input type="submit" value="登录" />
+        </form>
+
+        <!--
+           
+        -->
+
+        <form action="https://localhost:8080/jd/login">
+            <table>
+                <tr>
+                    <td>用户名</td>
+                    <td><input type="text" name="username"/></td>
+                </tr>
+                <tr>
+                    <td>密码</td>
+                    <td><input type="password" name="password"/></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <input type="submit" value="登录" />
+                        <!--submit和reset必须在标签内部-->
+                        <input type="reset" value="清空" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/11.html)
+
+## 用户注册的表单
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>用户注册的表单</title>
+    </head>
+    <body>
+        <form action="https://localhost:8080/test" method="POST">
+            用户名<input type="text" name="username" /><br />
+            密码<input type="password" name="userpwd" /><br />
+            确认密码<input type="password" /><br />
+            性别
+            <input type="radio" name="gender" value="1" checked />男
+            <input type="radio" name="gender" value="0" />女
+            兴趣爱好
+            <input type="checkbox" name="interest" value="smoke" />抽烟
+            <input type="checkbox" name="interest" value="drink" />喝酒
+            <input type="checkbox" name="interest" value="sleep" />睡觉
+            <br />
+            学历
+            <select name="grade">
+                <option value="gz">高中</option>
+                <option value="dz">大专</option>
+                <option value="bk" selected>本科</option>
+                <option value="ss">硕士</option>
+            </select>
+            简历
+            <textarea rows="10" cols="60" name="introduce"></textarea>
+            <input type="submit" value="提交" />
+            <input type="reset" value="清空" />
+        </form>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/12.html)
+
+## 下拉列表支持多选
+
+> 使用`multiple="multiple"`使下拉列表支持多选，`size`设置显示的下拉列表数量，多选时按住`Ctrl`键再点击
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>下拉列表支持多选</title>
+    </head>
+    <body>
+        <select multiple="multiple" size="2">
+            <option>陕西省</option>
+            <option>江西省</option>
+            <option>山西省</option>
+            <option>河北省</option>
+        </select>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/13.html)
+
+## readonly和disabled
+
+> readonly和disabled相同点，都是只读不能修改
+>
+> 但是readonly可以提交给服务器，disabled数据不会提交（即使有name属性也不会提交）
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>readonly和disabled</title>
+    </head>
+    <body>
+        <form action="https://localhost:8080/test">
+            用户代码<input type="text" name="usercode" value="1111" readonly /><br />
+            用户名<input type="text" name="username" value="admin" disabled /><br />
+            <input type="submit" value="提交" />
+            
+        </form>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/14.html)
+
+## 控件的maxlength属性
+
+> maxlength是用来设置文本框中可输入的字符数量
+
+# HTML中的id属性
+
+> 在HTML文档中，任何元素（节点）都有id属性，id属性是该节点的唯一标识，所在在同一个html文档中id不能重复
+>
+> 注意：表单提交数据的时候，只和name有关系，和id无关
+>
+> id有什么用？
+>
+> Javascript语言可以对HTML文档中的任意节点进行增删改操作，增删改之前需要先拿到节点，通常我们通过id来获取节点对象
+>
+> id的存在让我们获取元素（节点）更方便
+>
+> HTML文档是一棵树，树上有很多节点，每一个节点都有一个唯一的id
+>
+> - JavaScript主要就是对这颗DOM树上的节点进行增删改的
+> - DOM（Document）树。
+
+# div和span在网页中的应用
+
+> 1、div和span是什么？有什么用？
+>
+> - div和span都可以称为“图层”
+> - 图层是作用是为了保证页面可以灵活的布局
+> - 图层就是一个一个的盒子，div嵌套div就是盒子套盒子
+> - div和span是可以定位的，只要定下div左上角的x轴和y轴即可
+>
+> 2、div和span区别？
+>
+> - div会独自占用一行，span不会
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>div和span</title>
+    </head>
+    <body>
+        <div id="div1">我是一个div</div>
+        <div id="div2">我是一个div</div>
+        <span id="span1">我是一个span标签</span>
+        <span id="span2">我是一个span标签</span>
+        <div id="div3">
+            <div>
+                <div>test</div>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/15.html)
