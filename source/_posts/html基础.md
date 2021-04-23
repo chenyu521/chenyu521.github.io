@@ -25,6 +25,12 @@ categories:
 2、什么是HTML？怎么开发HTMl？怎么运行HTML？
 
 > HTML:Hyper Text Markup Language(超文本标记语言)
+>
+> <font color="red">
+>
+> <b>注意："mate charset="gbk"的作用是告诉浏览器采用哪一种字符集打开当前页面。并不是设置当前页面的字符编码格式"</b>
+>
+> </font>
 
 由大量的标签组成，每一个标签都有开始标签和结束标签。
 
@@ -345,3 +351,159 @@ W3C制定了很多规范：
 ```
 
 [点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/6.html)
+
+# 背景色和背景图片
+
+| 属性名     | 作用     |
+| ---------- | -------- |
+| bgcolor    | 背景颜色 |
+| background | 背景图片 |
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>背景颜色和背景图片</title>
+    </head>
+    <body bgcolor="red" background="img/play.png">
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/7.html)
+
+# HTML图片img标签
+
+| 属性         | 作用                     |
+| ------------ | ------------------------ |
+| img          | 图片标签                 |
+| src          | 设置图片路径             |
+| width/height | 图片的宽度/高度          |
+| title        | 鼠标悬停时显示的信息     |
+| alt          | 图片加载失败时显示的信息 |
+
+```html
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>图片</title>
+    </head>
+    <body>
+        <img src="img/play.png" width="100px" title="我是图片"/>
+        <br><br>
+        <img src="img/play1.png" alt="没有找到图片"/>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/8.html)
+
+# HTML超链接
+
+> href:hot references热引用
+>
+> href属性后面一定是一个资源的地址
+>
+> href后面的路径可以是相对路径可以是绝对路径，也可以是网络上的地址
+>
+> 超链接的特点：有下划线；鼠标停留在超链接上面显示小手形状；点击超链接之后还能跳转页面
+>
+> 超链接的作用：通过超链接可以从浏览器向服务器发送请求，浏览器向服务器发送数据（请求：request）；服务器向浏览器发送数据（响应：response）
+>
+> B/S结构的系统，每一个请求都会对应一个响应。
+>
+> ​					B---------请求----------->   S
+>
+> ​					S---------响应------------>   B
+>
+> 用户点击超链接和用户在浏览器地址栏上输入URL，本质上没有区别，都是向服务器发送请求，从操作上来讲，超链接使用更方便
+>
+> 
+
+超链接的target属性
+
+| 属性    | 作用             |
+| ------- | ---------------- |
+| _blank  | 新窗口           |
+| _self   | 当前窗口（默认） |
+| _top    | 顶级窗口         |
+| _parent | 父窗口           |
+
+**`_blank`属性和`_self`属性可看后面例子的预览页面，至于父窗口以及顶级窗口具体可看网站右上角主页的导航站其中部分应用打开效果**
+
+```html
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>超链接、热链接</title>
+    </head>
+    <body>
+        <a href="https://www.baidu.com">百度</a>
+        <br>
+        <br>
+        <!--
+            href:hot references热引用
+            href属性后面一定是一个资源的地址
+            href后面的路径可以是相对路径可以是绝对路径，也可以是网络上的地址
+        -->
+        <a href="index.html">主页</a><br />
+        <a href="https://www.baidu.com" target="_self">
+            点击原窗口打开
+            <img src="img/baidu.png" width="100px" />
+        </a>
+
+        <a href="https://www.baidu.com" target="_blank">
+            点击新窗口打开
+            <img src="img/baidu.png" width="100px" />
+        </a>
+    </body>
+</html>
+```
+
+[点击预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/9.html)
+
+# HTML列表
+
+有序列表的type属性：后面自定义
+
+无序列表的type属性
+
+| 属性   | 作用 |
+| ------ | ---- |
+| circle | 圈   |
+| square | 方块 |
+| disc   | 点   |
+
+```html
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>HTML列表</title>
+    </head>
+    <body>
+        <!--有序列表-->
+        <ol>
+            <li>水果</li>
+            <li>蔬菜</li>
+        </ol>
+        <!--无序列表-->
+        <ul>
+            <li>中国</li>
+                <ul>
+                    <li>陕西</li>
+                        <ul>
+                            <li>西安</li>
+                        </ul>
+                    <li>北京</li>
+                </ul>
+            <li>美国</li>
+            <li>英国</li>
+        </ul>
+    </body>
+</html>
+```
+
+[点此预览](https://chenyu521-7g6cys1w453479b5-1257692848.tcloudbaseapp.com/10.html)
