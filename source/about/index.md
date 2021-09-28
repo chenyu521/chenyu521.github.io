@@ -12,7 +12,7 @@ date: 2021-01-31 02:21:53
 # 能力
 
 - `Ctrl`+`c`和`Ctrl`+`v`
-- 擅长Ps、Pr、Ae、Ai、Dw、Vsode、Eclipse等软件的安装与卸载
+- 擅长Ps、Pr、Ae、Ai、Dw、Vscode、Eclipse等软件的安装与卸载
 - 熟悉Windows、Mac OS、Linux、Android等系统的开关机以及重启操作
 - 精通Html、Css、JavaScript、Php、Python、C、C++、Java等单词的拼写
 
